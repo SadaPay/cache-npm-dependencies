@@ -1,0 +1,21 @@
+name: "compisite action"
+description: "These are composite actions to reduce duplication from github workflows"
+
+inputs:
+  token:
+    description: 'To download required packages'
+    required: no
+
+runs:
+  using: "composite"
+  steps:
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/Cypress
+          key: ${{ runner.os }}-build-cache-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-cache-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+       

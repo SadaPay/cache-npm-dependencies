@@ -11,10 +11,8 @@ All you need to do is checkout this repository and use the path of the folder yo
         uses: actions/checkout@v2
       - name: Get composite run steps repository
           repository: SadaPay/composite-actions
-          # Select revision
           ref: v1
           path: ./.github/workflows
-          # Personal access token to check out private repository
           ssh-key: ${{ secrets.DT_COMPOSITE_ACTIONS }}
 
 2. Once you have the code checked out all you need to do is use the action of your choice

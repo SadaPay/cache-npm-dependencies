@@ -1,11 +1,6 @@
 name: "Cache NPM Dependencies"
 description: "Cache NPM dependencies including Cypress to speed up CI/CD"
 
-inputs:
-  token:
-    description: 'To download required packages'
-    required: no
-
 runs:
   using: "composite"
   steps:

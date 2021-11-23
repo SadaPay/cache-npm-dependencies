@@ -1,6 +1,6 @@
-# composite-actions
-What is a composite action?
-A composite action allows you to combine multiple workflow run steps within one action. You can bundle together multiple run commands into a single action and reduce duplication in your worklow.
+# Composite Actions
+
+[What is a composite action?](https://github.blog/changelog/2021-08-25-github-actions-reduce-duplication-with-action-composition/)
 
 # How to use composite actions that are in this repository
 

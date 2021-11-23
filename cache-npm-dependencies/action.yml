@@ -1,5 +1,5 @@
-name: "compisite action"
-description: "These are composite actions to reduce duplication from github workflows"
+name: "Cache NPM Dependencies"
+description: "Cache NPM dependencies including Cypress to speed up CI/CD"
 
 inputs:
   token:

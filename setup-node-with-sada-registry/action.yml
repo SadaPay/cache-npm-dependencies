@@ -1,5 +1,5 @@
-name: "compisite action"
-description: "These are composite actions to reduce duplication from github workflows"
+name: 'Setup Node with SadaPay Registry'
+description: 'Quickly setup Node with NPM configured to support installing internal SadaPay packages'
 
 inputs:
   token:

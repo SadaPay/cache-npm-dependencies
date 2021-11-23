@@ -2,8 +2,8 @@ name: 'Setup Node with SadaPay Registry'
 description: 'Quickly setup Node with NPM configured to support installing internal SadaPay packages'
 
 inputs:
-  token:
-    description: 'To download required packages'
+  GH_PACKAGES_READ_TOKEN:
+    description: 'GitHub Packages token for installing internal SadaPay packages'
     required: yes
 
 runs:
@@ -15,4 +15,4 @@ runs:
         registry-url: 'https://npm.pkg.github.com/sadapay/'
         scope: '@sadapay'
       env:
-       GH_PACKAGES_READ_TOKEN: ${{ inputs.token }}
+       GH_PACKAGES_READ_TOKEN: ${{ inputs.GH_PACKAGES_READ_TOKEN }}

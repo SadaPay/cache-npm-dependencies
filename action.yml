@@ -1,18 +1,16 @@
-name: 'Setup Node with SadaPay Registry'
-description: 'Quickly setup Node with NPM configured to support installing internal SadaPay packages'
-
-inputs:
-  GH_PACKAGES_READ_TOKEN:
-    description: 'GitHub Packages token for installing internal SadaPay packages'
-    required: yes
+name: "Cache NPM Dependencies"
+description: "Cache NPM dependencies including Cypress to speed up CI/CD"
 
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@v2.4.1
-      with:
-        node-version: 16.3.0
-        registry-url: 'https://npm.pkg.github.com/sadapay/'
-        scope: '@sadapay'
-      env:
-       GH_PACKAGES_READ_TOKEN: ${{ inputs.GH_PACKAGES_READ_TOKEN }}
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/Cypress
+          key: ${{ runner.os }}-build-cache-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-cache-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+     

@@ -9,9 +9,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@v2.4.1
+    - uses: actions/setup-node@v3
       with:
-        node-version: 16.3.0
+        node-version: 18
         registry-url: 'https://npm.pkg.github.com/sadapay/'
         scope: '@sadapay'
       env:
